@@ -4,10 +4,11 @@ fc-consul is a consul configuration provider for [fc](https://github.com/flowcha
 
 ## Usage
 ```go
+package consul
 
 import (
-    "github.com/flowchartsman/fc"
-    "github.com/flowchartsman/fc-consul"
+	"github.com/flowchartsman/fc"
+	"github.com/flowchartsman/fc-consul"
 )
 
 func main() {
@@ -18,8 +19,9 @@ func main() {
 		debug      = fs.Bool("debug", false, "log debug information")
 	)
 
-    fc.Parse(fs,
-        fc.NewEnvSource("MY_PROGRAM"),
-        consul.NewSource("localhost:8500", "my/prefix")
-    )
+	fc.Parse(fs,
+		fc.NewEnvSource("MY_PROGRAM"),
+		consul.NewSource("localhost:8500", "my/prefix"),
+	)
+}
 ```
