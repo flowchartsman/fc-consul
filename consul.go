@@ -16,9 +16,9 @@ type Source struct {
 	m      map[string][]string
 }
 
-// NewSource creates a new consul Source pulling from the consul node at addr,
+// WithNode creates a new consul Source pulling from the consul node at addr,
 // using the provided prefix
-func NewSource(addr string, prefix string) *Source {
+func WithNode(addr string, prefix string) *Source {
 	return &Source{
 		addr:   addr,
 		prefix: prefix,

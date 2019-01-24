@@ -21,7 +21,7 @@ func main() {
 
 	fc.Parse(fs,
 		fc.NewEnvSource("MY_PROGRAM"),
-		consul.NewSource("localhost:8500", "my/prefix"),
+		consul.WithNode("localhost:8500", "my/prefix"),
 	)
 }
 ```
